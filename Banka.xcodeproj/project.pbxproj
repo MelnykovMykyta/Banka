@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		523AA0B1D07937D4794A8799 /* Pods_Banka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE54412A8D2968A4382E1CD1 /* Pods_Banka.framework */; };
 		775B89382B66FF90009606AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B89372B66FF90009606AA /* AppDelegate.swift */; };
 		775B893A2B66FF90009606AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B89392B66FF90009606AA /* SceneDelegate.swift */; };
-		775B893C2B66FF90009606AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B893B2B66FF90009606AA /* ViewController.swift */; };
-		775B893F2B66FF90009606AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775B893D2B66FF90009606AA /* Main.storyboard */; };
 		775B89412B66FF94009606AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 775B89402B66FF94009606AA /* Assets.xcassets */; };
 		775B89442B66FF94009606AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 775B89422B66FF94009606AA /* LaunchScreen.storyboard */; };
+		775B894E2B670175009606AA /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B894D2B670175009606AA /* MainVC.swift */; };
+		77ABAFC02B670B3D00E90654 /* MoneyAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 77ABAFBF2B670B3D00E90654 /* MoneyAnimation.json */; };
+		77ABAFC22B6714D300E90654 /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ABAFC12B6714D300E90654 /* AnimationVC.swift */; };
+		77ABAFC52B67150800E90654 /* VCChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ABAFC42B67150800E90654 /* VCChanger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		775B89342B66FF90009606AA /* Banka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		775B89372B66FF90009606AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		775B89392B66FF90009606AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		775B893B2B66FF90009606AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		775B893E2B66FF90009606AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		775B89402B66FF94009606AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		775B89432B66FF94009606AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		775B89452B66FF94009606AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		775B894D2B670175009606AA /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		77ABAFBF2B670B3D00E90654 /* MoneyAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MoneyAnimation.json; sourceTree = "<group>"; };
+		77ABAFC12B6714D300E90654 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
+		77ABAFC42B67150800E90654 /* VCChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCChanger.swift; sourceTree = "<group>"; };
+		99F004848BFC23917ADBD671 /* Pods-Banka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banka.debug.xcconfig"; path = "Target Support Files/Pods-Banka/Pods-Banka.debug.xcconfig"; sourceTree = "<group>"; };
+		AE54412A8D2968A4382E1CD1 /* Pods_Banka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Banka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E009E6EA6D432D9F157DBBF2 /* Pods-Banka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banka.release.xcconfig"; path = "Target Support Files/Pods-Banka/Pods-Banka.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				523AA0B1D07937D4794A8799 /* Pods_Banka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76D0C072534B51FD28250FE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE54412A8D2968A4382E1CD1 /* Pods_Banka.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		775B892B2B66FF90009606AA = {
 			isa = PBXGroup;
 			children = (
 				775B89362B66FF90009606AA /* Banka */,
 				775B89352B66FF90009606AA /* Products */,
+				E33F50DC9D86CC92BE4DC547 /* Pods */,
+				76D0C072534B51FD28250FE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +75,50 @@
 		775B89362B66FF90009606AA /* Banka */ = {
 			isa = PBXGroup;
 			children = (
+				775B894B2B6700AE009606AA /* Application */,
+				77ABAFC32B6714FB00E90654 /* Helpers */,
+				775B894C2B6700C7009606AA /* Support */,
+				775B894D2B670175009606AA /* MainVC.swift */,
+				77ABAFC12B6714D300E90654 /* AnimationVC.swift */,
+			);
+			path = Banka;
+			sourceTree = "<group>";
+		};
+		775B894B2B6700AE009606AA /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				775B89372B66FF90009606AA /* AppDelegate.swift */,
 				775B89392B66FF90009606AA /* SceneDelegate.swift */,
-				775B893B2B66FF90009606AA /* ViewController.swift */,
-				775B893D2B66FF90009606AA /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		775B894C2B6700C7009606AA /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				77ABAFBF2B670B3D00E90654 /* MoneyAnimation.json */,
 				775B89402B66FF94009606AA /* Assets.xcassets */,
 				775B89422B66FF94009606AA /* LaunchScreen.storyboard */,
 				775B89452B66FF94009606AA /* Info.plist */,
 			);
-			path = Banka;
+			path = Support;
+			sourceTree = "<group>";
+		};
+		77ABAFC32B6714FB00E90654 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				77ABAFC42B67150800E90654 /* VCChanger.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E33F50DC9D86CC92BE4DC547 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99F004848BFC23917ADBD671 /* Pods-Banka.debug.xcconfig */,
+				E009E6EA6D432D9F157DBBF2 /* Pods-Banka.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 775B89482B66FF94009606AA /* Build configuration list for PBXNativeTarget "Banka" */;
 			buildPhases = (
+				7016B543498F1A5507BA9C3F /* [CP] Check Pods Manifest.lock */,
 				775B89302B66FF90009606AA /* Sources */,
 				775B89312B66FF90009606AA /* Frameworks */,
 				775B89322B66FF90009606AA /* Resources */,
+				5BEA56319B3C2671C163E17C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,18 +183,62 @@
 			files = (
 				775B89442B66FF94009606AA /* LaunchScreen.storyboard in Resources */,
 				775B89412B66FF94009606AA /* Assets.xcassets in Resources */,
-				775B893F2B66FF90009606AA /* Main.storyboard in Resources */,
+				77ABAFC02B670B3D00E90654 /* MoneyAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BEA56319B3C2671C163E17C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Banka/Pods-Banka-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Banka/Pods-Banka-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Banka/Pods-Banka-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7016B543498F1A5507BA9C3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Banka-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		775B89302B66FF90009606AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				775B893C2B66FF90009606AA /* ViewController.swift in Sources */,
+				775B894E2B670175009606AA /* MainVC.swift in Sources */,
+				77ABAFC22B6714D300E90654 /* AnimationVC.swift in Sources */,
+				77ABAFC52B67150800E90654 /* VCChanger.swift in Sources */,
 				775B89382B66FF90009606AA /* AppDelegate.swift in Sources */,
 				775B893A2B66FF90009606AA /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +247,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		775B893D2B66FF90009606AA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				775B893E2B66FF90009606AA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		775B89422B66FF94009606AA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +374,7 @@
 		};
 		775B89492B66FF94009606AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F004848BFC23917ADBD671 /* Pods-Banka.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,12 +382,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HHTA648R26;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Banka/Info.plist;
+				INFOPLIST_FILE = Banka/Support/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Banka;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +403,7 @@
 		};
 		775B894A2B66FF94009606AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E009E6EA6D432D9F157DBBF2 /* Pods-Banka.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,12 +411,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HHTA648R26;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Banka/Info.plist;
+				INFOPLIST_FILE = Banka/Support/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Banka;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
