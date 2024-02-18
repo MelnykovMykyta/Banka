@@ -8,11 +8,15 @@
 import Foundation
 import UIKit
 import SnapKit
-import Lottie
 
 class MainVC: UIViewController {
     
-    private var label: UILabel!
+    private var infoView: UIView!
+    private var todayProfit: UILabel!
+    private var svContLabels: UIStackView!
+    private var monthProfit: ProfitLabel!
+    private var yesterdayProfit: ProfitLabel!
+    private var addProfitButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +27,76 @@ class MainVC: UIViewController {
 private extension MainVC {
     
     func setupView() {
-        view.backgroundColor = .black
+        view.backgroundColor = D.Colors.mainBackgroundColor
         
-        label = UILabel()
-        label.text = "MAIN"
-        label.textColor = .white
-        label.font = UIFont(name: "Arial", size: 36)
-        view.addSubview(label)
+        infoView = UIView()
+        infoView.backgroundColor = D.Colors.mainBackgroundColor
+        view.addSubview(infoView)
         
-        label.snp.makeConstraints {
-            $0.center.equalToSuperview()
+        let todayCountLable = UILabel()
+        todayCountLable.text = D.Texts.todayProfit
+        todayCountLable.font = UIFont(name: "Nexa-Light", size: 20)
+        todayCountLable.textColor = D.Colors.standartTextColor
+        infoView.addSubview(todayCountLable)
+        
+        todayProfit = UILabel()
+        todayProfit.text = "+2033$"
+        todayProfit.font = UIFont(name: "Nexa-Bold", size: 50)
+        todayProfit.textColor = D.Colors.profitText
+        infoView.addSubview(todayProfit)
+        
+        svContLabels = UIStackView()
+        svContLabels.axis = .horizontal
+        svContLabels.distribution = .fillEqually
+        infoView.addSubview(svContLabels)
+        
+        let monthLabelsSV = LabelsStackView()
+        svContLabels.addArrangedSubview(monthLabelsSV)
+        
+        let monthCountLabel = BaseCountLabel()
+        monthCountLabel.text = D.Texts.monthProfit
+        monthLabelsSV.addArrangedSubview(monthCountLabel)
+        
+        monthProfit = ProfitLabel()
+        monthProfit.text = "33323$"
+        monthLabelsSV.addArrangedSubview(monthProfit)
+        
+        let yesterdayLabelsSV = LabelsStackView()
+        svContLabels.addArrangedSubview(yesterdayLabelsSV)
+        
+        let yesterdayCountLabel = BaseCountLabel()
+        yesterdayCountLabel.text = D.Texts.yesterdayProfit
+        yesterdayLabelsSV.addArrangedSubview(yesterdayCountLabel)
+        
+        yesterdayProfit = ProfitLabel()
+        yesterdayProfit.text = "32$"
+        yesterdayLabelsSV.addArrangedSubview(yesterdayProfit)
+        
+        addProfitButton = UIButton(type: .system)
+        addProfitButton.backgroundColor = .red
+        addProfitButton.setImage(UIImage(systemName: "plus"), for: .normal)
+
+        view.addSubview(addProfitButton)
+        
+        infoView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.leading.trailing.equalToSuperview()
+        }
+        
+        todayCountLable.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(20)
+            $0.centerX.equalToSuperview()
+        }
+        
+        todayProfit.snp.makeConstraints {
+            $0.top.equalTo(todayCountLable.snp.bottom).inset(-20)
+            $0.centerX.equalToSuperview()
+        }
+        
+        svContLabels.snp.makeConstraints {
+            $0.top.equalTo(todayProfit.snp.bottom).inset(-20)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.bottom.equalToSuperview().inset(20)
         }
     }
 }

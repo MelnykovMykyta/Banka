@@ -27,17 +27,17 @@ private extension NavigationTabBarController {
         tabBar.backgroundImage = UIImage()
         tabBar.shadowImage = UIImage()
         
-        let moviesListNavigationController = NavigationBarController(rootViewController: ListVC())
-        let favoritesNavigationController = NavigationBarController(rootViewController: FavoritesVC())
+        let moviesListNavigationController = NavigationBarController(rootViewController: MainVC())
+        let graphsNavigationController = NavigationBarController(rootViewController: GraphsVC())
         
-        moviesListNavigationController.tabBarItem = Tabs.moviesList.itemBar
-        favoritesNavigationController.tabBarItem = Tabs.favorites.itemBar
+        moviesListNavigationController.tabBarItem = NavigationTabs.main.itemBar
+        graphsNavigationController.tabBarItem = NavigationTabs.graphs.itemBar
         
-        setViewControllers([moviesListNavigationController, favoritesNavigationController], animated: false)
+        setViewControllers([moviesListNavigationController, graphsNavigationController], animated: false)
         
-        selectedIndex = Tabs.moviesList.rawValue
+        selectedIndex = NavigationTabs.main.rawValue
         
-        let positionX: CGFloat = tabBar.bounds.width / 5
+        let positionX: CGFloat = tabBar.bounds.width / 4
         let positionY: CGFloat = 8
         let width = tabBar.bounds.width - positionX * 2
         let height = tabBar.bounds.height + positionY * 2
@@ -59,4 +59,3 @@ extension NavigationTabBarController: UITabBarControllerDelegate {
         Haptic.getHaptic()
     }
 }
-

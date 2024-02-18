@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Nexa-Bold.ttf</string>
+		<string>Nexa-Heavy-Italic.ttf</string>
+		<string>Nexa-Light-Italic.ttf</string>
+		<string>Nexa-Light.ttf</string>
+		<string>Nexa-Regular-Italic.ttf</string>
+		<string>NexaBlack.ttf</string>
+		<string>NexaHeavy.ttf</string>
+		<string>NexaRegular.ttf</string>
+		<string>NexaThin.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -27,7 +27,7 @@ class AnimationVC: UIViewController {
 private extension AnimationVC {
     
     func setupView() {
-        view.backgroundColor = D.Colors.backgroundColor
+        view.backgroundColor = D.Colors.mainBackgroundColor
         
         animatedView = LottieAnimationView(name: "MoneyAnimation")
         animatedView.animationSpeed = 2
@@ -45,7 +45,7 @@ private extension AnimationVC {
             UIView.animate(withDuration: 0.3, animations: {
                 self.animatedView.alpha = 0
             }) { _ in
-                VCChanger.changeVC(vc: MainVC())
+                VCChanger.changeVC(vc: NavigationTabBarController())
             }
         }
     }

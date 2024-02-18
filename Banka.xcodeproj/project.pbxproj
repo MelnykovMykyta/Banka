@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		523AA0B1D07937D4794A8799 /* Pods_Banka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE54412A8D2968A4382E1CD1 /* Pods_Banka.framework */; };
+		7722ECA32B82705B00F00C7F /* GraphsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7722ECA22B82705B00F00C7F /* GraphsVC.swift */; };
 		775B89382B66FF90009606AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B89372B66FF90009606AA /* AppDelegate.swift */; };
 		775B893A2B66FF90009606AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B89392B66FF90009606AA /* SceneDelegate.swift */; };
 		775B89412B66FF94009606AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 775B89402B66FF94009606AA /* Assets.xcassets */; };
@@ -16,9 +17,27 @@
 		77ABAFC02B670B3D00E90654 /* MoneyAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 77ABAFBF2B670B3D00E90654 /* MoneyAnimation.json */; };
 		77ABAFC22B6714D300E90654 /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ABAFC12B6714D300E90654 /* AnimationVC.swift */; };
 		77ABAFC52B67150800E90654 /* VCChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ABAFC42B67150800E90654 /* VCChanger.swift */; };
+		77DDB3A32B8226CF00B918E0 /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3A22B8226CF00B918E0 /* NavigationBarController.swift */; };
+		77DDB3A52B82272000B918E0 /* D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3A42B82272000B918E0 /* D.swift */; };
+		77DDB3A72B8228D400B918E0 /* NavigationTabBarContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3A62B8228D400B918E0 /* NavigationTabBarContorller.swift */; };
+		77DDB3AA2B82295900B918E0 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3A92B82295900B918E0 /* Haptic.swift */; };
+		77DDB3AC2B82299200B918E0 /* NavigationTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3AB2B82299200B918E0 /* NavigationTabs.swift */; };
+		77DDB3B92B8244E600B918E0 /* NexaRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB3B02B8244E200B918E0 /* NexaRegular.ttf */; };
+		77DDB3BA2B8244E600B918E0 /* Nexa-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB3B12B8244E300B918E0 /* Nexa-Bold.ttf */; };
+		77DDB3BB2B8244E600B918E0 /* NexaBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB3B22B8244E300B918E0 /* NexaBlack.ttf */; };
+		77DDB3BC2B8244E600B918E0 /* Nexa-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB3B32B8244E400B918E0 /* Nexa-Light.ttf */; };
+		77DDB3BD2B8244E600B918E0 /* Nexa-Regular-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB3B42B8244E400B918E0 /* Nexa-Regular-Italic.ttf */; };
+		77DDB3BE2B8244E600B918E0 /* NexaHeavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB3B52B8244E500B918E0 /* NexaHeavy.ttf */; };
+		77DDB3BF2B8244E600B918E0 /* Nexa-Light-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB3B62B8244E500B918E0 /* Nexa-Light-Italic.ttf */; };
+		77DDB3C02B8244E600B918E0 /* Nexa-Heavy-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB3B72B8244E600B918E0 /* Nexa-Heavy-Italic.ttf */; };
+		77DDB3C12B8244E600B918E0 /* NexaThin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77DDB3B82B8244E600B918E0 /* NexaThin.ttf */; };
+		77DDB3C42B82569F00B918E0 /* LabelsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3C32B82569F00B918E0 /* LabelsStackView.swift */; };
+		77DDB3C82B825A0900B918E0 /* ProfitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3C72B825A0900B918E0 /* ProfitLabel.swift */; };
+		77DDB3CA2B825B3D00B918E0 /* BaseCountLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3C92B825B3D00B918E0 /* BaseCountLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7722ECA22B82705B00F00C7F /* GraphsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsVC.swift; sourceTree = "<group>"; };
 		775B89342B66FF90009606AA /* Banka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		775B89372B66FF90009606AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		775B89392B66FF90009606AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +48,23 @@
 		77ABAFBF2B670B3D00E90654 /* MoneyAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MoneyAnimation.json; sourceTree = "<group>"; };
 		77ABAFC12B6714D300E90654 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		77ABAFC42B67150800E90654 /* VCChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCChanger.swift; sourceTree = "<group>"; };
+		77DDB3A22B8226CF00B918E0 /* NavigationBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarController.swift; sourceTree = "<group>"; };
+		77DDB3A42B82272000B918E0 /* D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
+		77DDB3A62B8228D400B918E0 /* NavigationTabBarContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabBarContorller.swift; sourceTree = "<group>"; };
+		77DDB3A92B82295900B918E0 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
+		77DDB3AB2B82299200B918E0 /* NavigationTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabs.swift; sourceTree = "<group>"; };
+		77DDB3B02B8244E200B918E0 /* NexaRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NexaRegular.ttf; sourceTree = "<group>"; };
+		77DDB3B12B8244E300B918E0 /* Nexa-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Bold.ttf"; sourceTree = "<group>"; };
+		77DDB3B22B8244E300B918E0 /* NexaBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NexaBlack.ttf; sourceTree = "<group>"; };
+		77DDB3B32B8244E400B918E0 /* Nexa-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Light.ttf"; sourceTree = "<group>"; };
+		77DDB3B42B8244E400B918E0 /* Nexa-Regular-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Regular-Italic.ttf"; sourceTree = "<group>"; };
+		77DDB3B52B8244E500B918E0 /* NexaHeavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NexaHeavy.ttf; sourceTree = "<group>"; };
+		77DDB3B62B8244E500B918E0 /* Nexa-Light-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Light-Italic.ttf"; sourceTree = "<group>"; };
+		77DDB3B72B8244E600B918E0 /* Nexa-Heavy-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa-Heavy-Italic.ttf"; sourceTree = "<group>"; };
+		77DDB3B82B8244E600B918E0 /* NexaThin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NexaThin.ttf; sourceTree = "<group>"; };
+		77DDB3C32B82569F00B918E0 /* LabelsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsStackView.swift; sourceTree = "<group>"; };
+		77DDB3C72B825A0900B918E0 /* ProfitLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitLabel.swift; sourceTree = "<group>"; };
+		77DDB3C92B825B3D00B918E0 /* BaseCountLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCountLabel.swift; sourceTree = "<group>"; };
 		99F004848BFC23917ADBD671 /* Pods-Banka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banka.debug.xcconfig"; path = "Target Support Files/Pods-Banka/Pods-Banka.debug.xcconfig"; sourceTree = "<group>"; };
 		AE54412A8D2968A4382E1CD1 /* Pods_Banka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Banka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E009E6EA6D432D9F157DBBF2 /* Pods-Banka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banka.release.xcconfig"; path = "Target Support Files/Pods-Banka/Pods-Banka.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,11 +111,10 @@
 		775B89362B66FF90009606AA /* Banka */ = {
 			isa = PBXGroup;
 			children = (
+				775B894C2B6700C7009606AA /* Support */,
+				77DDB3A12B8226B700B918E0 /* Controllers */,
 				775B894B2B6700AE009606AA /* Application */,
 				77ABAFC32B6714FB00E90654 /* Helpers */,
-				775B894C2B6700C7009606AA /* Support */,
-				775B894D2B670175009606AA /* MainVC.swift */,
-				77ABAFC12B6714D300E90654 /* AnimationVC.swift */,
 			);
 			path = Banka;
 			sourceTree = "<group>";
@@ -96,6 +131,7 @@
 		775B894C2B6700C7009606AA /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				77DDB3AF2B8244D400B918E0 /* Fonts */,
 				77ABAFBF2B670B3D00E90654 /* MoneyAnimation.json */,
 				775B89402B66FF94009606AA /* Assets.xcassets */,
 				775B89422B66FF94009606AA /* LaunchScreen.storyboard */,
@@ -107,9 +143,59 @@
 		77ABAFC32B6714FB00E90654 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				77DDB3C22B82567B00B918E0 /* Components */,
 				77ABAFC42B67150800E90654 /* VCChanger.swift */,
+				77DDB3A42B82272000B918E0 /* D.swift */,
+				77DDB3A92B82295900B918E0 /* Haptic.swift */,
+				77DDB3AB2B82299200B918E0 /* NavigationTabs.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		77DDB3A12B8226B700B918E0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				775B894D2B670175009606AA /* MainVC.swift */,
+				77ABAFC12B6714D300E90654 /* AnimationVC.swift */,
+				77DDB3A82B8228FE00B918E0 /* NavigationContoller */,
+				7722ECA22B82705B00F00C7F /* GraphsVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		77DDB3A82B8228FE00B918E0 /* NavigationContoller */ = {
+			isa = PBXGroup;
+			children = (
+				77DDB3A22B8226CF00B918E0 /* NavigationBarController.swift */,
+				77DDB3A62B8228D400B918E0 /* NavigationTabBarContorller.swift */,
+			);
+			path = NavigationContoller;
+			sourceTree = "<group>";
+		};
+		77DDB3AF2B8244D400B918E0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				77DDB3B12B8244E300B918E0 /* Nexa-Bold.ttf */,
+				77DDB3B72B8244E600B918E0 /* Nexa-Heavy-Italic.ttf */,
+				77DDB3B62B8244E500B918E0 /* Nexa-Light-Italic.ttf */,
+				77DDB3B32B8244E400B918E0 /* Nexa-Light.ttf */,
+				77DDB3B42B8244E400B918E0 /* Nexa-Regular-Italic.ttf */,
+				77DDB3B22B8244E300B918E0 /* NexaBlack.ttf */,
+				77DDB3B52B8244E500B918E0 /* NexaHeavy.ttf */,
+				77DDB3B02B8244E200B918E0 /* NexaRegular.ttf */,
+				77DDB3B82B8244E600B918E0 /* NexaThin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		77DDB3C22B82567B00B918E0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				77DDB3C32B82569F00B918E0 /* LabelsStackView.swift */,
+				77DDB3C72B825A0900B918E0 /* ProfitLabel.swift */,
+				77DDB3C92B825B3D00B918E0 /* BaseCountLabel.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E33F50DC9D86CC92BE4DC547 /* Pods */ = {
@@ -151,7 +237,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					775B89332B66FF90009606AA = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -181,9 +267,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77DDB3BB2B8244E600B918E0 /* NexaBlack.ttf in Resources */,
+				77DDB3BD2B8244E600B918E0 /* Nexa-Regular-Italic.ttf in Resources */,
 				775B89442B66FF94009606AA /* LaunchScreen.storyboard in Resources */,
+				77DDB3B92B8244E600B918E0 /* NexaRegular.ttf in Resources */,
 				775B89412B66FF94009606AA /* Assets.xcassets in Resources */,
+				77DDB3BF2B8244E600B918E0 /* Nexa-Light-Italic.ttf in Resources */,
+				77DDB3C02B8244E600B918E0 /* Nexa-Heavy-Italic.ttf in Resources */,
+				77DDB3C12B8244E600B918E0 /* NexaThin.ttf in Resources */,
+				77DDB3BA2B8244E600B918E0 /* Nexa-Bold.ttf in Resources */,
 				77ABAFC02B670B3D00E90654 /* MoneyAnimation.json in Resources */,
+				77DDB3BC2B8244E600B918E0 /* Nexa-Light.ttf in Resources */,
+				77DDB3BE2B8244E600B918E0 /* NexaHeavy.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,10 +332,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				775B894E2B670175009606AA /* MainVC.swift in Sources */,
+				7722ECA32B82705B00F00C7F /* GraphsVC.swift in Sources */,
+				77DDB3C82B825A0900B918E0 /* ProfitLabel.swift in Sources */,
+				77DDB3A52B82272000B918E0 /* D.swift in Sources */,
+				77DDB3A32B8226CF00B918E0 /* NavigationBarController.swift in Sources */,
+				77DDB3AA2B82295900B918E0 /* Haptic.swift in Sources */,
 				77ABAFC22B6714D300E90654 /* AnimationVC.swift in Sources */,
+				77DDB3AC2B82299200B918E0 /* NavigationTabs.swift in Sources */,
 				77ABAFC52B67150800E90654 /* VCChanger.swift in Sources */,
 				775B89382B66FF90009606AA /* AppDelegate.swift in Sources */,
+				77DDB3C42B82569F00B918E0 /* LabelsStackView.swift in Sources */,
+				77DDB3A72B8228D400B918E0 /* NavigationTabBarContorller.swift in Sources */,
 				775B893A2B66FF90009606AA /* SceneDelegate.swift in Sources */,
+				77DDB3CA2B825B3D00B918E0 /* BaseCountLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +398,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -354,6 +459,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -386,6 +492,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Banka;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -415,6 +522,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Banka;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
