@@ -73,9 +73,9 @@ private extension MainVC {
         yesterdayLabelsSV.addArrangedSubview(yesterdayProfit)
         
         addProfitButton = UIButton(type: .system)
-        addProfitButton.backgroundColor = .red
-        addProfitButton.setImage(UIImage(systemName: "plus"), for: .normal)
-
+        addProfitButton.setTitle("Add profit +", for: .normal)
+        addProfitButton.titleLabel?.font = UIFont(name: "Nexa-Bold", size: 24)
+        addProfitButton.tintColor = D.Colors.standartTextWithAlpha
         view.addSubview(addProfitButton)
         
         infoView.snp.makeConstraints {
@@ -97,6 +97,11 @@ private extension MainVC {
             $0.top.equalTo(todayProfit.snp.bottom).inset(-20)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.bottom.equalToSuperview().inset(20)
+        }
+        
+        addProfitButton.snp.makeConstraints {
+            $0.top.equalTo(infoView.snp.bottom).inset(-20)
+            $0.trailing.equalToSuperview().inset(20)
         }
     }
 }
