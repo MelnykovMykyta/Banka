@@ -27,7 +27,7 @@ class AnimationVC: UIViewController {
 private extension AnimationVC {
     
     func setupView() {
-        view.backgroundColor = .black
+        view.backgroundColor = D.Colors.backgroundColor
         
         animatedView = LottieAnimationView(name: "MoneyAnimation")
         animatedView.animationSpeed = 2
@@ -50,4 +50,3 @@ private extension AnimationVC {
         }
     }
 }
-
