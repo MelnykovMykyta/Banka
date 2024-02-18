@@ -33,9 +33,12 @@
 		77DDB3C42B82569F00B918E0 /* LabelsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3C32B82569F00B918E0 /* LabelsStackView.swift */; };
 		77DDB3C82B825A0900B918E0 /* ProfitLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3C72B825A0900B918E0 /* ProfitLabel.swift */; };
 		77DDB3CA2B825B3D00B918E0 /* BaseCountLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3C92B825B3D00B918E0 /* BaseCountLabel.swift */; };
+		A8F9F49E41F49623AED62951 /* Pods_Banka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD677A784BEB7D6672C535CF /* Pods_Banka.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30F41E8517E3CAFF5436D4AD /* Pods-Banka.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banka.release.xcconfig"; path = "Target Support Files/Pods-Banka/Pods-Banka.release.xcconfig"; sourceTree = "<group>"; };
+		47500A0FE2AE840EB7A760A1 /* Pods-Banka.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Banka.debug.xcconfig"; path = "Target Support Files/Pods-Banka/Pods-Banka.debug.xcconfig"; sourceTree = "<group>"; };
 		7722ECA22B82705B00F00C7F /* GraphsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphsVC.swift; sourceTree = "<group>"; };
 		775B89342B66FF90009606AA /* Banka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		775B89372B66FF90009606AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		77DDB3C32B82569F00B918E0 /* LabelsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsStackView.swift; sourceTree = "<group>"; };
 		77DDB3C72B825A0900B918E0 /* ProfitLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfitLabel.swift; sourceTree = "<group>"; };
 		77DDB3C92B825B3D00B918E0 /* BaseCountLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCountLabel.swift; sourceTree = "<group>"; };
+		FD677A784BEB7D6672C535CF /* Pods_Banka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Banka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F9F49E41F49623AED62951 /* Pods_Banka.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,7 @@
 				775B89362B66FF90009606AA /* Banka */,
 				775B89352B66FF90009606AA /* Products */,
 				E33F50DC9D86CC92BE4DC547 /* Pods */,
+				FFE4B8CDCA2B85DDDF3D30CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,8 +193,18 @@
 		E33F50DC9D86CC92BE4DC547 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				47500A0FE2AE840EB7A760A1 /* Pods-Banka.debug.xcconfig */,
+				30F41E8517E3CAFF5436D4AD /* Pods-Banka.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FFE4B8CDCA2B85DDDF3D30CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD677A784BEB7D6672C535CF /* Pods_Banka.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 775B89482B66FF94009606AA /* Build configuration list for PBXNativeTarget "Banka" */;
 			buildPhases = (
+				05DF1776A27ED87C0F8CA656 /* [CP] Check Pods Manifest.lock */,
 				775B89302B66FF90009606AA /* Sources */,
 				775B89312B66FF90009606AA /* Frameworks */,
 				775B89322B66FF90009606AA /* Resources */,
+				0B609BC506C2BD438D2E59D2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,6 +283,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05DF1776A27ED87C0F8CA656 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Banka-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0B609BC506C2BD438D2E59D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Banka/Pods-Banka-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Banka/Pods-Banka-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Banka/Pods-Banka-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		775B89302B66FF90009606AA /* Sources */ = {
@@ -420,6 +480,7 @@
 		};
 		775B89492B66FF94009606AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47500A0FE2AE840EB7A760A1 /* Pods-Banka.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -449,6 +510,7 @@
 		};
 		775B894A2B66FF94009606AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30F41E8517E3CAFF5436D4AD /* Pods-Banka.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
