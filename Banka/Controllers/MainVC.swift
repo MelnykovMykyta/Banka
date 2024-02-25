@@ -16,11 +16,21 @@ class MainVC: UIViewController {
     private var svContLabels: UIStackView!
     private var monthProfit: ProfitLabel!
     private var yesterdayProfit: ProfitLabel!
+    private var addProfitBtnView: UIView!
+    private var calendarBtnView: UIView!
     private var addProfitButton: UIButton!
+    private var calendarButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        [addProfitBtnView, calendarBtnView].forEach { elem in
+            elem.layer.cornerRadius = elem.frame.height / 2
+            elem.layer.masksToBounds = true
+        }
     }
 }
 
@@ -72,11 +82,28 @@ private extension MainVC {
         yesterdayProfit.text = "32$"
         yesterdayLabelsSV.addArrangedSubview(yesterdayProfit)
         
+        let buttonsSV = UIStackView()
+        buttonsSV.axis = .horizontal
+        buttonsSV.spacing = 40
+        view.addSubview(buttonsSV)
+        
+        addProfitBtnView = UIView()
+        calendarBtnView = UIView()
+        [addProfitBtnView,calendarBtnView].forEach { elem in
+            elem.backgroundColor = .gray
+            buttonsSV.addArrangedSubview(elem)
+        }
+        
         addProfitButton = UIButton(type: .system)
-        addProfitButton.setTitle("Add profit +", for: .normal)
-        addProfitButton.titleLabel?.font = UIFont(name: "Nexa-Bold", size: 24)
+        addProfitButton.setImage(UIImage(systemName: "plus"), for: .normal)
         addProfitButton.tintColor = D.Colors.standartTextWithAlpha
-        view.addSubview(addProfitButton)
+        addProfitBtnView.addSubview(addProfitButton)
+        
+        calendarButton = UIButton(type: .system)
+        calendarButton.setImage(UIImage(systemName: "calendar"), for: .normal)
+        calendarButton.tintColor = D.Colors.standartTextWithAlpha
+        calendarBtnView.addSubview(calendarButton)
+        
         
         infoView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
@@ -99,9 +126,18 @@ private extension MainVC {
             $0.bottom.equalToSuperview().inset(20)
         }
         
-        addProfitButton.snp.makeConstraints {
+        buttonsSV.snp.makeConstraints {
             $0.top.equalTo(infoView.snp.bottom).inset(-20)
-            $0.trailing.equalToSuperview().inset(20)
+            $0.centerX.equalToSuperview()
+            
         }
+        
+        addProfitBtnView.snp.makeConstraints { $0.size.equalTo(80) }
+
+        addProfitButton.snp.makeConstraints { $0.edges.equalToSuperview() }
+        
+        calendarBtnView.snp.makeConstraints { $0.size.equalTo(80) }
+        
+        calendarButton.snp.makeConstraints { $0.edges.equalToSuperview() }
     }
 }
