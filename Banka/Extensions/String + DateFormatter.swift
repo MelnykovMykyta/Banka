@@ -29,4 +29,13 @@ extension String {
         return dateFormatter.string(from: date)
     }
     
+    func getFullDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+        
+        guard let date = dateFormatter.date(from: self) else { return "" }
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+
+        return dateFormatter.string(from: date)
+    }
 }

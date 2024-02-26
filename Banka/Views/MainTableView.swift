@@ -37,7 +37,7 @@ extension MainTableView: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.setutProfit(date: "13.02.2024", profit: "2000")
+        cell.setutProfit(date: Date(), source: "Контрасты", profit: "2000")
         return cell
     }
 }
