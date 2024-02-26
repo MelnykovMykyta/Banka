@@ -27,11 +27,10 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        tableView.delegate = self
     }
     
     override func viewWillLayoutSubviews() {
-        [addProfitBtnView, calendarBtnView].forEach { elem in
+        [addProfitBtnView, calendarBtnView, addProfitButton, calendarButton].forEach { elem in
             elem.layer.cornerRadius = elem.frame.height / 2
             elem.layer.masksToBounds = true
         }
@@ -101,14 +100,15 @@ private extension MainVC {
         addProfitButton = UIButton(type: .system)
         addProfitButton.setImage(UIImage(systemName: "plus"), for: .normal)
         addProfitButton.tintColor = D.Colors.standartTextWithAlpha
-        addProfitBtnView.addSubview(addProfitButton)
+        view.addSubview(addProfitButton)
         
         calendarButton = UIButton(type: .system)
         calendarButton.setImage(UIImage(systemName: "calendar"), for: .normal)
         calendarButton.tintColor = D.Colors.standartTextWithAlpha
-        calendarBtnView.addSubview(calendarButton)
+        view.addSubview(calendarButton)
         
         tableView = MainTableView()
+        tableView.delegate = self
         view.addSubview(tableView)
         
         infoView.snp.makeConstraints {
@@ -137,13 +137,21 @@ private extension MainVC {
             $0.centerX.equalToSuperview()
         }
         
-        addProfitBtnView.snp.makeConstraints { $0.size.equalTo(80) }
+        addProfitBtnView.snp.makeConstraints {
+            $0.size.equalTo(80)
+        }
         
-        addProfitButton.snp.makeConstraints { $0.edges.equalToSuperview() }
+        addProfitButton.snp.makeConstraints {
+            $0.edges.equalTo(addProfitBtnView.snp.edges)
+        }
         
-        calendarBtnView.snp.makeConstraints { $0.size.equalTo(80) }
+        calendarBtnView.snp.makeConstraints {
+            $0.size.equalTo(80)
+        }
         
-        calendarButton.snp.makeConstraints { $0.edges.equalToSuperview() }
+        calendarButton.snp.makeConstraints {
+            $0.edges.equalTo(calendarBtnView.snp.edges)
+        }
         
         tableView.snp.makeConstraints {
             $0.top.equalTo(buttonsSV.snp.bottom).inset(-20)
@@ -161,7 +169,19 @@ extension MainVC: UIScrollViewDelegate, UITableViewDelegate {
         let limitedOffset = max(minOffset, min(maxOffset, offset))
         let alpha = 1 - (limitedOffset * 2) / maxOffset
         
-        svContLabels.alpha = alpha
+        [todayCountLable, svContLabels, addProfitBtnView, calendarBtnView].forEach { elem in
+            elem.alpha = alpha
+        }
+        
+        if alpha == 0 {
+            [todayCountLable, svContLabels].forEach { elem in
+                elem?.isHidden = true
+            }
+        } else {
+            [todayCountLable, svContLabels, addProfitBtnView, calendarBtnView].forEach { elem in
+                elem?.isHidden = false
+            }
+        }
         
         UIView.animate(withDuration: 0.2) {
             self.todayCountLable.snp.updateConstraints {
