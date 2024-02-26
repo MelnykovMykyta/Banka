@@ -17,6 +17,8 @@
 		77ABAFC02B670B3D00E90654 /* MoneyAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 77ABAFBF2B670B3D00E90654 /* MoneyAnimation.json */; };
 		77ABAFC22B6714D300E90654 /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ABAFC12B6714D300E90654 /* AnimationVC.swift */; };
 		77ABAFC52B67150800E90654 /* VCChanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ABAFC42B67150800E90654 /* VCChanger.swift */; };
+		77D9AA402B8BFC4A00E12D2E /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D9AA3F2B8BFC4A00E12D2E /* MainTableView.swift */; };
+		77D9AA422B8BFD7700E12D2E /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D9AA412B8BFD7700E12D2E /* MainTVC.swift */; };
 		77DDB3A32B8226CF00B918E0 /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3A22B8226CF00B918E0 /* NavigationBarController.swift */; };
 		77DDB3A52B82272000B918E0 /* D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3A42B82272000B918E0 /* D.swift */; };
 		77DDB3A72B8228D400B918E0 /* NavigationTabBarContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB3A62B8228D400B918E0 /* NavigationTabBarContorller.swift */; };
@@ -51,6 +53,8 @@
 		77ABAFBF2B670B3D00E90654 /* MoneyAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MoneyAnimation.json; sourceTree = "<group>"; };
 		77ABAFC12B6714D300E90654 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		77ABAFC42B67150800E90654 /* VCChanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCChanger.swift; sourceTree = "<group>"; };
+		77D9AA3F2B8BFC4A00E12D2E /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		77D9AA412B8BFD7700E12D2E /* MainTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
 		77DDB3A22B8226CF00B918E0 /* NavigationBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarController.swift; sourceTree = "<group>"; };
 		77DDB3A42B82272000B918E0 /* D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
 		77DDB3A62B8228D400B918E0 /* NavigationTabBarContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabBarContorller.swift; sourceTree = "<group>"; };
@@ -111,10 +115,11 @@
 		775B89362B66FF90009606AA /* Banka */ = {
 			isa = PBXGroup;
 			children = (
-				775B894C2B6700C7009606AA /* Support */,
-				77DDB3A12B8226B700B918E0 /* Controllers */,
+				77D9AA3D2B8BFC2200E12D2E /* Views */,
 				775B894B2B6700AE009606AA /* Application */,
+				77DDB3A12B8226B700B918E0 /* Controllers */,
 				77ABAFC32B6714FB00E90654 /* Helpers */,
+				775B894C2B6700C7009606AA /* Support */,
 			);
 			path = Banka;
 			sourceTree = "<group>";
@@ -150,6 +155,14 @@
 				77DDB3AB2B82299200B918E0 /* NavigationTabs.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		77D9AA3D2B8BFC2200E12D2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				77D9AA3F2B8BFC4A00E12D2E /* MainTableView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		77DDB3A12B8226B700B918E0 /* Controllers */ = {
@@ -194,6 +207,7 @@
 				77DDB3C32B82569F00B918E0 /* LabelsStackView.swift */,
 				77DDB3C72B825A0900B918E0 /* ProfitLabel.swift */,
 				77DDB3C92B825B3D00B918E0 /* BaseCountLabel.swift */,
+				77D9AA412B8BFD7700E12D2E /* MainTVC.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -341,8 +355,10 @@
 				77DDB3AC2B82299200B918E0 /* NavigationTabs.swift in Sources */,
 				77ABAFC52B67150800E90654 /* VCChanger.swift in Sources */,
 				775B89382B66FF90009606AA /* AppDelegate.swift in Sources */,
+				77D9AA422B8BFD7700E12D2E /* MainTVC.swift in Sources */,
 				77DDB3C42B82569F00B918E0 /* LabelsStackView.swift in Sources */,
 				77DDB3A72B8228D400B918E0 /* NavigationTabBarContorller.swift in Sources */,
+				77D9AA402B8BFC4A00E12D2E /* MainTableView.swift in Sources */,
 				775B893A2B66FF90009606AA /* SceneDelegate.swift in Sources */,
 				77DDB3CA2B825B3D00B918E0 /* BaseCountLabel.swift in Sources */,
 			);

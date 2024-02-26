@@ -12,18 +12,22 @@ import SnapKit
 class MainVC: UIViewController {
     
     private var infoView: UIView!
+    private var todayCountLable: UILabel!
     private var todayProfit: UILabel!
     private var svContLabels: UIStackView!
     private var monthProfit: ProfitLabel!
     private var yesterdayProfit: ProfitLabel!
+    private var buttonsSV: UIStackView!
     private var addProfitBtnView: UIView!
     private var calendarBtnView: UIView!
     private var addProfitButton: UIButton!
     private var calendarButton: UIButton!
+    private var tableView: MainTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        tableView.delegate = self
     }
     
     override func viewWillLayoutSubviews() {
@@ -43,7 +47,7 @@ private extension MainVC {
         infoView.backgroundColor = D.Colors.mainBackgroundColor
         view.addSubview(infoView)
         
-        let todayCountLable = UILabel()
+        todayCountLable = UILabel()
         todayCountLable.text = D.Texts.todayProfit
         todayCountLable.font = UIFont(name: "Nexa-Light", size: 20)
         todayCountLable.textColor = D.Colors.standartTextColor
@@ -82,7 +86,7 @@ private extension MainVC {
         yesterdayProfit.text = "32$"
         yesterdayLabelsSV.addArrangedSubview(yesterdayProfit)
         
-        let buttonsSV = UIStackView()
+        buttonsSV = UIStackView()
         buttonsSV.axis = .horizontal
         buttonsSV.spacing = 40
         view.addSubview(buttonsSV)
@@ -104,6 +108,8 @@ private extension MainVC {
         calendarButton.tintColor = D.Colors.standartTextWithAlpha
         calendarBtnView.addSubview(calendarButton)
         
+        tableView = MainTableView()
+        view.addSubview(tableView)
         
         infoView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
@@ -129,15 +135,43 @@ private extension MainVC {
         buttonsSV.snp.makeConstraints {
             $0.top.equalTo(infoView.snp.bottom).inset(-20)
             $0.centerX.equalToSuperview()
-            
         }
         
         addProfitBtnView.snp.makeConstraints { $0.size.equalTo(80) }
-
+        
         addProfitButton.snp.makeConstraints { $0.edges.equalToSuperview() }
         
         calendarBtnView.snp.makeConstraints { $0.size.equalTo(80) }
         
         calendarButton.snp.makeConstraints { $0.edges.equalToSuperview() }
+        
+        tableView.snp.makeConstraints {
+            $0.top.equalTo(buttonsSV.snp.bottom).inset(-20)
+            $0.leading.trailing.bottom.equalToSuperview()
+        }
+    }
+}
+
+extension MainVC: UIScrollViewDelegate, UITableViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        let minOffset: CGFloat = 0
+        let maxOffset: CGFloat = 50
+        let limitedOffset = max(minOffset, min(maxOffset, offset))
+        let alpha = 1 - (limitedOffset * 2) / maxOffset
+        
+        svContLabels.alpha = alpha
+        
+        UIView.animate(withDuration: 0.2) {
+            self.todayCountLable.snp.updateConstraints {
+                $0.top.equalToSuperview().inset(-limitedOffset)
+            }
+            
+            self.svContLabels.snp.updateConstraints {
+                $0.bottom.equalToSuperview().offset(limitedOffset)
+            }
+            self.view.layoutIfNeeded()
+        }
     }
 }
