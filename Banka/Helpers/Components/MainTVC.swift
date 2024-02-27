@@ -15,6 +15,7 @@ class MainTVC: UITableViewCell {
     private var profitTitle: ProfitLabel!
     private var dateLabel: UILabel!
     private var sourceLabel: UILabel!
+    private var label: UILabel!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -27,7 +28,7 @@ class MainTVC: UITableViewCell {
     
     override internal func prepareForReuse() {
         super.prepareForReuse()
-        [view, profitTitle, dateLabel].forEach { elem in
+        [view, profitTitle, dateLabel, label].forEach { elem in
             elem?.removeFromSuperview()
         }
     }
@@ -35,7 +36,22 @@ class MainTVC: UITableViewCell {
 
 extension MainTVC {
     
-    func setutProfit(date: Date, source: String, profit: String) {
+    func setupEmptyCell() {
+        label = UILabel()
+        label.text = "Add your profits"
+        label.font = UIFont(name: "Nexa-Bold", size: 48)
+        label.textColor = D.Colors.standartTextColor.withAlphaComponent(0.1)
+        label.textAlignment = .center
+        label.numberOfLines = 2
+        contentView.addSubview(label)
+        
+        label.snp.makeConstraints {
+            $0.height.equalTo(contentView.snp.width)
+            $0.edges.equalToSuperview().inset(40)
+        }
+    }
+    
+    func setupProfit(date: Date, source: String, profit: Int) {
         view = UIView()
         view.backgroundColor = .clear
         contentView.addSubview(view)
@@ -60,7 +76,7 @@ extension MainTVC {
         dateSourceSV.addArrangedSubview(sourceLabel)
         
         profitTitle = ProfitLabel()
-        profitTitle.text = "+\(profit)$"
+        profitTitle.text = "+\(profit.description)$"
         view.addSubview(profitTitle)
         
         let separatorView = UIView()

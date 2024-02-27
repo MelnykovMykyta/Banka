@@ -8,8 +8,13 @@
 import Foundation
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
 class MainVC: UIViewController {
+    
+    private let viewModel = ProfitViewModel()
+    private let disposeBag = DisposeBag()
     
     private var infoView: UIView!
     private var todayCountLable: UILabel!
@@ -27,6 +32,12 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        
+        addProfitButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                guard let self else { return }
+                self.viewModel.addProfit()
+            }).disposed(by: disposeBag)
     }
     
     override func viewWillLayoutSubviews() {
@@ -183,7 +194,7 @@ extension MainVC: UIScrollViewDelegate, UITableViewDelegate {
             }
         }
         
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.08) {
             self.todayCountLable.snp.updateConstraints {
                 $0.top.equalToSuperview().inset(-limitedOffset)
             }
@@ -191,7 +202,6 @@ extension MainVC: UIScrollViewDelegate, UITableViewDelegate {
             self.svContLabels.snp.updateConstraints {
                 $0.bottom.equalToSuperview().offset(limitedOffset)
             }
-            self.view.layoutIfNeeded()
         }
     }
 }

@@ -7,10 +7,15 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MainTableView: UITableView {
     
     private let cell = "MainTVC"
+    private let viewModel = ProfitViewModel()
+    private let disposeBag = DisposeBag()
+    private var profitItems: [ProfitItem] = []
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -20,6 +25,12 @@ class MainTableView: UITableView {
         allowsSelection = false
         separatorStyle = .none
         showsVerticalScrollIndicator = false
+        
+        profitItems = viewModel.getItems()
+        viewModel.observeProfitItems().subscribe(onNext: { event in
+            self.profitItems = self.viewModel.getItems()
+            self.reloadData()
+        }).disposed(by: disposeBag)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -29,7 +40,7 @@ class MainTableView: UITableView {
 
 extension MainTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        profitItems.isEmpty ? 1 : profitItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,7 +48,12 @@ extension MainTableView: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.setutProfit(date: Date(), source: "Контрасты", profit: "2000")
+        if profitItems.isEmpty {
+            cell.setupEmptyCell()
+        } else {
+            let item = profitItems[indexPath.row]
+            cell.setupProfit(date: item.date, source: item.source, profit: item.profit)
+        }
         return cell
     }
 }
