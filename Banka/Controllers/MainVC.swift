@@ -174,33 +174,22 @@ private extension MainVC {
 extension MainVC: UIScrollViewDelegate, UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offset = scrollView.contentOffset.y
-        let minOffset: CGFloat = 0
-        let maxOffset: CGFloat = 50
+        let offset = scrollView.contentOffset.y / 4
+        let minOffset: CGFloat = 0.0
+        let maxOffset: CGFloat = 50.0
         let limitedOffset = max(minOffset, min(maxOffset, offset))
         let alpha = 1 - (limitedOffset * 2) / maxOffset
-        
-        [todayCountLable, svContLabels, addProfitBtnView, calendarBtnView].forEach { elem in
-            elem.alpha = alpha
+
+        [todayCountLable, svContLabels, addProfitBtnView, calendarBtnView].forEach {
+            $0.alpha = alpha
         }
         
-        if alpha == 0 {
-            [todayCountLable, svContLabels].forEach { elem in
-                elem?.isHidden = true
-            }
-        } else {
-            [todayCountLable, svContLabels, addProfitBtnView, calendarBtnView].forEach { elem in
-                elem?.isHidden = false
-            }
-        }
-        
-        UIView.animate(withDuration: 0.08) {
+        UIView.animate(withDuration: 0.2) {
             self.todayCountLable.snp.updateConstraints {
                 $0.top.equalToSuperview().inset(-limitedOffset)
             }
-            
             self.svContLabels.snp.updateConstraints {
-                $0.bottom.equalToSuperview().offset(limitedOffset)
+                $0.bottom.equalToSuperview().inset(-limitedOffset)
             }
         }
     }

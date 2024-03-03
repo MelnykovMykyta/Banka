@@ -40,13 +40,13 @@ extension MainTVC {
         label = UILabel()
         label.text = "Add your profits"
         label.font = UIFont(name: "Nexa-Bold", size: 48)
-        label.textColor = D.Colors.standartTextColor.withAlphaComponent(0.1)
+        label.textColor = D.Colors.standartTextColor.withAlphaComponent(0.2)
         label.textAlignment = .center
         label.numberOfLines = 2
         contentView.addSubview(label)
         
         label.snp.makeConstraints {
-            $0.height.equalTo(contentView.snp.width)
+            $0.height.equalTo(contentView.snp.width).multipliedBy(0.5)
             $0.edges.equalToSuperview().inset(40)
         }
     }
